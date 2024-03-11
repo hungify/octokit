@@ -1,0 +1,25 @@
+{
+  "name": "types",
+  "module": "scripts/build.mjs",
+  "type": "module",
+  "version": "1.0.0",
+  "dependencies": {
+    "github-openapi-graphql-query": "^4.4.0"
+  },
+  "devDependencies": {
+    "@types/bun": "latest",
+    "handlebars": "^4.7.8",
+    "json-schema-to-typescript": "^13.1.2",
+    "prettier": "^3.2.5",
+    "sort-keys": "^5.0.0",
+    "openapi-types": "link:openapi-types"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  },
+  "files": [
+    "dist-types/**"
+  ],
+  "types": "dist-types/index.d.ts",
+  "sideEffects": false
+}
