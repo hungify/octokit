@@ -3,16 +3,23 @@
   "module": "index.ts",
   "type": "module",
   "scripts": {
-    "openapi-types": "bun run src/openapi-types/index.js"
+    "openapi-types": "bun run src/openapi-types/index.js",
+    "update-endpoints": "npm-run-all update-endpoints:*",
+    "update-endpoints:fetch-json": "VERSION=8.0.0 node src/types/fetch-json.mjs",
+    "update-endpoints:typescript": "VERSION=8.0.0 bun run src/types/typescript.mjs"
   },
   "devDependencies": {
-    "@types/bun": "latest"
+    "@types/bun": "latest",
+    "handlebars": "^4.7.8",
+    "json-schema-to-typescript": "^13.1.2",
+    "prettier": "^3.2.5",
+    "sort-keys": "^5.0.0"
   },
   "peerDependencies": {
     "typescript": "^5.0.0"
   },
   "dependencies": {
-    "openapi-typescript": "^6.7.4",
-    "prettier": "^3.2.5"
+    "github-openapi-graphql-query": "^4.4.0",
+    "openapi-typescript": "^6.7.4"
   }
 }

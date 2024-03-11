@@ -173,3 +173,7 @@ dist
 
 # Finder (MacOS) folder config
 .DS_Store
+
+
+# Endpoints
+types/endpoints/endpoints.json
