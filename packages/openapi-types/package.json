@@ -1,0 +1,16 @@
+{
+  "name": "openapi-types",
+  "module": "index.ts",
+  "type": "module",
+  "version": "1.0.0",
+  "scripts": {
+    "generate-types": "bun run scripts/index.ts"
+  },
+  "devDependencies": {
+    "@types/bun": "latest",
+    "openapi-typescript": "^6.7.4"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  }
+}
