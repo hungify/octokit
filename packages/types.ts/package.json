@@ -1,5 +1,5 @@
 {
-  "name": "types",
+  "name": "octokit-types",
   "module": "scripts/build.mjs",
   "type": "module",
   "version": "1.0.0",
