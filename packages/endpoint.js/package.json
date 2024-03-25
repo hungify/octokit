@@ -1,13 +1,10 @@
 {
   "name": "endpoint.js",
-  "module": "src/index.ts",
+  "module": "scripts/build.mjs",
   "type": "module",
   "description": "Turns REST API endpoints into generic request options",
   "scripts": {
-    "build": "node scripts/build.mjs && tsc -p tsconfig.json",
-    "lint": "prettier --check '{scripts,src,test}/**/*' README.md package.json",
-    "lint:fix": "prettier --write '{scripts,src,test}/**/*' README.md package.json",
-    "pretest": "npm run -s lint",
+    "build": "bun run scripts/build.mjs && tsc -p tsconfig.json",
     "test": "NODE_OPTIONS=\"$NODE_OPTIONS --experimental-vm-modules\" npx jest --coverage"
   },
   "devDependencies": {
