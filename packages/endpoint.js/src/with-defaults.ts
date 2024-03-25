@@ -2,7 +2,7 @@ import type {
   EndpointInterface,
   RequestParameters,
   EndpointDefaults,
-} from "@octokit/types";
+} from "#octokit-types/pkg/dist-types";
 
 import { endpointWithDefaults } from "./endpoint-with-defaults.js";
 import { merge } from "./merge.js";
@@ -10,7 +10,7 @@ import { parse } from "./parse.js";
 
 export function withDefaults(
   oldDefaults: EndpointDefaults | null,
-  newDefaults: RequestParameters,
+  newDefaults: RequestParameters
 ): EndpointInterface {
   const DEFAULTS = merge(oldDefaults, newDefaults);
   const endpoint = endpointWithDefaults.bind(null, DEFAULTS);

@@ -1,4 +1,7 @@
-import type { EndpointOptions, EndpointDefaults } from "@octokit/types";
+import type {
+  EndpointOptions,
+  EndpointDefaults,
+} from "#octokit-types/pkg/dist-types";
 
 import { endpoint } from "../src/index.ts";
 

@@ -2,8 +2,7 @@ import type {
   EndpointDefaults,
   RequestParameters,
   Route,
-} from "@octokit/types";
-
+} from "#octokit-types/pkg/dist-types";
 import { lowercaseKeys } from "./util/lowercase-keys.js";
 import { mergeDeep } from "./util/merge-deep.js";
 import { removeUndefinedProperties } from "./util/remove-undefined-properties.js";
@@ -11,7 +10,7 @@ import { removeUndefinedProperties } from "./util/remove-undefined-properties.js
 export function merge(
   defaults: EndpointDefaults | null,
   route?: Route | RequestParameters,
-  options?: RequestParameters,
+  options?: RequestParameters
 ) {
   if (typeof route === "string") {
     let [method, url] = route.split(" ");
@@ -34,7 +33,7 @@ export function merge(
     if (defaults && defaults.mediaType.previews?.length) {
       mergedOptions.mediaType.previews = defaults.mediaType
         .previews!.filter(
-          (preview) => !mergedOptions.mediaType.previews!.includes(preview),
+          (preview) => !mergedOptions.mediaType.previews!.includes(preview)
         )
         .concat(mergedOptions.mediaType.previews!);
     }
