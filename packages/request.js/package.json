@@ -1,0 +1,26 @@
+{
+  "name": "request.js",
+  "module": "index.ts",
+  "type": "module",
+  "description": "Send parameterized requests to GitHub's APIs with sensible defaults in browsers and Node",
+  "scripts": {
+    "build": "node scripts/build.mjs && tsc -p tsconfig.json",
+    "lint": "prettier --check '{src,test}/**/*' README.md package.json",
+    "lint:fix": "prettier --write '{src,test}/**/*' README.md package.json",
+    "pretest": "npm run -s lint"
+  },
+  "dependencies": {
+    "#endpoint.js": "link:endpoint.js",
+    "@octokit/request-error": "^6.0.1",
+    "#octokit-types": "link:octokit-types",
+    "universal-user-agent": "^7.0.2"
+  },
+  "devDependencies": {
+    "@types/bun": "latest",
+    "esbuild": "^0.20.0",
+    "prettier": "3.2.5"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  }
+}
