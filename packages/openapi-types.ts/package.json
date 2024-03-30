@@ -4,7 +4,7 @@
   "type": "module",
   "version": "1.0.0",
   "scripts": {
-    "generate-types": "bun run scripts/index.ts"
+    "build": "bun run scripts/index.ts"
   },
   "devDependencies": {
     "@types/bun": "latest",
