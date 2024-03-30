@@ -175,7 +175,7 @@ dist
 .DS_Store
 
 
-# build types
+# build output
 /pkg
 
 # generated files
