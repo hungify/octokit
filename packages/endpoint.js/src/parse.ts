@@ -2,7 +2,7 @@ import type {
   EndpointDefaults,
   RequestMethod,
   RequestOptions,
-} from "#octokit-types/pkg/dist-types";
+} from "#octokit-types/pkg";
 
 import { addQueryParameters } from "./util/add-query-parameters.js";
 import { extractUrlVariableNames } from "./util/extract-url-variable-names.js";

@@ -1,6 +1,6 @@
 import { isPlainObject } from "./is-plain-object.js";
 import { RequestError } from "@octokit/request-error";
-import type { EndpointInterface } from "#octokit-types/pkg/dist-types";
+import type { EndpointInterface } from "#octokit-types/pkg";
 
 import getBuffer from "./get-buffer-response.js";
 

@@ -2,7 +2,7 @@ import type {
   EndpointInterface,
   RequestParameters,
   EndpointDefaults,
-} from "#octokit-types/pkg/dist-types";
+} from "#octokit-types/pkg";
 
 import { endpointWithDefaults } from "./endpoint-with-defaults.js";
 import { merge } from "./merge.js";

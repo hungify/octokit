@@ -6,7 +6,7 @@ import type {
   Route,
   RequestInterface,
   RequestParameters,
-} from "#octokit-types/pkg/dist-types";
+} from "#octokit-types/pkg";
 
 export default function withDefaults(
   oldEndpoint: EndpointInterface,

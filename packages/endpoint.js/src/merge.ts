@@ -2,7 +2,7 @@ import type {
   EndpointDefaults,
   RequestParameters,
   Route,
-} from "#octokit-types/pkg/dist-types";
+} from "#octokit-types/pkg";
 import { lowercaseKeys } from "./util/lowercase-keys.js";
 import { mergeDeep } from "./util/merge-deep.js";
 import { removeUndefinedProperties } from "./util/remove-undefined-properties.js";

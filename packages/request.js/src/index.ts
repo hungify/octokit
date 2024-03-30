@@ -1,4 +1,4 @@
-import { endpoint } from "#endpoint.js/pkg/dist-types";
+import { endpoint } from "#endpoint.js/pkg";
 import { getUserAgent } from "universal-user-agent";
 
 import { VERSION } from "./version.js";

@@ -2,7 +2,7 @@ import type {
   EndpointOptions,
   RequestParameters,
   Route,
-} from "#octokit-types/pkg/dist-types";
+} from "#octokit-types/pkg";
 
 import { DEFAULTS } from "./defaults.js";
 import { merge } from "./merge.js";
