@@ -7,7 +7,6 @@
     "moduleDetection": "force",
     "jsx": "react-jsx",
     "allowJs": true,
-
     // Bundler mode
     "moduleResolution": "bundler",
     "allowImportingTsExtensions": true,
@@ -17,12 +16,10 @@
     "outDir": "pkg/dist-types",
     "emitDeclarationOnly": true,
     "sourceMap": true,
-
     // Best practices
     "strict": true,
     "skipLibCheck": true,
     "noFallthroughCasesInSwitch": true,
-
     // Some stricter flags (disabled by default)
     "noUnusedLocals": false,
     "noUnusedParameters": false,
