@@ -44,6 +44,9 @@ async function main() {
     ...sharedOptions,
   });
 
+  // Copy the README to the pkg folder
+  await copyFile("README.md", "pkg/README.md");
+
   // Handle the package.json
   let pkg = JSON.parse((await readFile("package.json", "utf8")).toString());
   // Remove unnecessary fields from the package.json
@@ -57,6 +60,8 @@ async function main() {
       {
         ...pkg,
         files: ["dist-*/**", "bin/**"],
+        main: "dist-bundle/index.js",
+        types: "dist-types/index.d.ts",
         exports: {
           ".": {
             types: "./dist-types/index.d.ts",
