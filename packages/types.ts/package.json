@@ -7,7 +7,7 @@
     "update-endpoints": "npm-run-all update-endpoints:*",
     "update-endpoints:fetch-json": "VERSION=14.1.0 node scripts/update-endpoints/fetch-json.mjs",
     "update-endpoints:typescript": "VERSION=14.1.0 bun run scripts/update-endpoints/typescript.mjs",
-    "build:types": "bun run scripts/build.mjs && tsc -p tsconfig.json"
+    "build": "bun run scripts/build.mjs && tsc -p tsconfig.json"
   },
   "devDependencies": {
     "#openapi-types.ts": "link:openapi-types.ts",
