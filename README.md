@@ -18,4 +18,10 @@ My research on the Octokit SDK for GitHub API.
 
 ## Overview
 
+Typically, developers of such applications want to:
+
+- Use TypeScript interfaces to model data for their APIs
+- Send and fetch this data from server in a typesafe way
+- Build further abstractions on top of this data
+
 ![overview](/assets/image.png)
