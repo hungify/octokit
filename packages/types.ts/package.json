@@ -5,9 +5,10 @@
   "version": "1.0.0",
   "scripts": {
     "update-endpoints": "npm-run-all update-endpoints:*",
+    "update-endpoints:generate-json": "VERSION=14.1.0 node scripts/update-endpoints/endpoints.mjs",
     "update-endpoints:fetch-json": "VERSION=14.1.0 node scripts/update-endpoints/fetch-json.mjs",
-    "update-endpoints:typescript": "VERSION=14.1.0 bun run scripts/update-endpoints/typescript.mjs",
-    "build": "bun run scripts/build.mjs && tsc -p tsconfig.json"
+    "update-endpoints:typescript": "VERSION=14.1.0 node run scripts/update-endpoints/typescript.mjs",
+    "build": "node run scripts/build.mjs && tsc -p tsconfig.json"
   },
   "devDependencies": {
     "#openapi-types.ts": "link:openapi-types.ts",
