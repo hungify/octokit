@@ -5,17 +5,16 @@
   "version": "1.0.0",
   "scripts": {
     "update-endpoints": "npm-run-all update-endpoints:*",
-    "update-endpoints:generate-json": "VERSION=14.1.0 node scripts/update-endpoints/endpoints.mjs",
-    "update-endpoints:fetch-json": "VERSION=14.1.0 node scripts/update-endpoints/fetch-json.mjs",
-    "update-endpoints:typescript": "VERSION=14.1.0 node run scripts/update-endpoints/typescript.mjs",
-    "build": "node run scripts/build.mjs && tsc -p tsconfig.json"
+    "update-endpoints:generate-json": "bun run scripts/update-endpoints/endpoints.mjs",
+    "update-endpoints:fetch-json": "bun run scripts/update-endpoints/fetch-json.mjs",
+    "update-endpoints:typescript": "bun run scripts/update-endpoints/typescript.mjs",
+    "build": "bun run scripts/build.mjs && tsc -p tsconfig.json"
   },
   "devDependencies": {
     "#openapi-types.ts": "link:openapi-types.ts",
     "@types/bun": "latest",
     "github-openapi-graphql-query": "^4.4.0",
     "handlebars": "^4.7.8",
-    "json-schema-to-typescript": "^13.1.2",
     "npm-run-all": "^4.1.5",
     "prettier": "^3.2.5",
     "sort-keys": "^5.0.0"
