@@ -3,19 +3,7 @@ import type { paths } from "#openapi-types.ts/packages/openapi-types";
 import type { OctokitResponse } from "../OctokitResponse";
 import type { RequestHeaders } from "../RequestHeaders";
 import type { RequestRequestOptions } from "../RequestRequestOptions";
-
-/**
- * @license (MIT OR CC0-1.0)
- * @source https://github.com/sindresorhus/type-fest/blob/570e27f8fdaee37ef5d5e0fbf241e0212ff8fc1a/source/simplify.d.ts
- */
-export type Simplify<T> = { [KeyType in keyof T]: T[KeyType] } & {};
-
-// https://stackoverflow.com/a/50375286/206879
-type UnionToIntersection<U> = (U extends any ? (k: U) => void : never) extends (
-  k: infer I,
-) => void
-  ? I
-  : never;
+import type { Simplify, UnionToIntersection } from "type-fest";
 
 type ExtractParameters<T> = "parameters" extends keyof T
   ? UnionToIntersection<
