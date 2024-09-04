@@ -1,4 +1,4 @@
-import { readdir, mkdir, writeFile } from "node:fs/promises";
+import { readdir, mkdir, writeFile, exists } from "node:fs/promises";
 import { basename } from "node:path";
 
 import * as prettier from "prettier";
@@ -27,9 +27,11 @@ async function run() {
 
     const name = basename(fileName, ".json");
 
-    const packageName =
-      name === "api.github.com" ? "openapi-types" : `openapi-types-${name}`;
-    await mkdir(`packages/${packageName}`);
+    const packageName = "openapi-types";
+
+    const existsPackageFolder = await exists(`packages/${packageName}`);
+    if (!existsPackageFolder) await mkdir(`packages/${packageName}`);
+
     await writeFile(
       `packages/${packageName}/package.json`,
       await prettier.format(
@@ -52,9 +54,7 @@ async function run() {
         `
 # @octokit/${packageName}
 
-> Generated TypeScript definitions based on GitHub's OpenAPI spec ${
-          packageName === "openapi-types" ? "" : `for ${name}`
-        }
+> Generated TypeScript definitions based on GitHub's OpenAPI spec ${`for ${name}`}
 
 This package is continuously updated based on [GitHub's OpenAPI specification](https://github.com/github/rest-api-description/)
 
@@ -74,12 +74,13 @@ type Repository = components["schemas"]["full-repository"]
       )
     );
 
-    await writeFile(
-      `packages/${packageName}/types.d.ts`,
-      await prettier.format(await openapiTS(`cache/${name}.json`), {
+    const formattedSchema = await prettier.format(
+      await openapiTS(`cache/${name}.json`),
+      {
         parser: "typescript",
-      })
+      }
     );
+    await writeFile(`packages/${packageName}/types.d.ts`, formattedSchema);
     console.log(`packages/${packageName}/types.d.ts written`);
   }
 }
