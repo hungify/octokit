@@ -1,0 +1,20 @@
+{
+  "name": "openapi-typescript",
+  "module": "index.ts",
+  "type": "module",
+  "scripts": {
+    "dev": "bun run ./src/index.js ./src/cache/api.github.com.deref.json -o ./src/generated/api.github.com.deref.d.ts"
+  },
+  "devDependencies": {
+    "@types/bun": "latest",
+    "undici": "^5.28.4"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  },
+  "dependencies": {
+    "@redocly/openapi-core": "^1.22.1",
+    "openapi-typescript": "^6.7.4",
+    "prettier": "^3.3.3"
+  }
+}
